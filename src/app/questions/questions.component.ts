@@ -12,8 +12,6 @@ export class QuestionsComponent implements OnInit {
   questions: Question[] = [];
   counter = 0;
   step = 0;
-  flag: boolean;
-  answer: string;
 
   myGroup = new FormGroup({
     answer1: new FormControl(Validators.required)
@@ -33,27 +31,16 @@ export class QuestionsComponent implements OnInit {
   }
 
   nextQuestion(step) {
-    console.log(step);
-    this.step = this.step + 1;
-    console.log(this.myGroup.value);
+    this.step = step + 1;
   }
 
-  previousQuestion() {
-    this.step = this.step - 1;
+  previousQuestion(step) {
+    this.step = step - 1;
   }
 
   changeDetected(questionId, optionId) {
-    console.log("The question id is: " + questionId);
-    console.log("The option id is: " + optionId);
     if (this.questions[questionId].options[optionId].isAnswer)
       this.counter = this.counter + 1;
   }
-
-  // loadQuestions() {
-  //   this.service.loadQuestions().subscribe(
-  //     allQuestions => console.log(allQuestions),
-  //     error => console.log("Error:: " + error)
-  //   );
-  // }
 
 }

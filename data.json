@@ -1,0 +1,304 @@
+{
+  "questions": [
+    {
+      "Id": 101,
+      "name": "Which of the following is not OOPS concept in Java?",
+      "options": [
+        {
+          "Id": 1011,
+          "questionId": 101,
+          "name": "Inheritance",
+          "isAnswer": false
+        },
+        {
+          "Id": 1012,
+          "questionId": 101,
+          "name": "Encapsulation",
+          "isAnswer": false
+        },
+        {
+          "Id": 1013,
+          "questionId": 101,
+          "name": "Polymorphism",
+          "isAnswer": false
+        },
+        {
+          "Id": 1014,
+          "questionId": 101,
+          "name": "Compilation",
+          "isAnswer": true
+        }
+      ]
+    },
+    {
+      "Id": 102,
+      "name": "Which of the following is a type of polymorphism in Java?",
+      "options": [
+        {
+          "Id": 1021,
+          "questionId": 102,
+          "name": "Compile time polymorphism",
+          "isAnswer": true
+        },
+        {
+          "Id": 1022,
+          "questionId": 102,
+          "name": "Execution time polymorphism",
+          "isAnswer": false
+        },
+        {
+          "Id": 1023,
+          "questionId": 102,
+          "name": "Multiple polymorphism",
+          "isAnswer": false
+        },
+        {
+          "Id": 1024,
+          "questionId": 102,
+          "name": "Multilevel polymorphism",
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "Id": 103,
+      "name": "When is method overloading determined?",
+      "options": [
+        {
+          "Id": 1031,
+          "questionId": 103,
+          "name": "At run time",
+          "isAnswer": false
+        },
+        {
+          "Id": 1032,
+          "questionId": 103,
+          "name": "At compile time",
+          "isAnswer": true
+        },
+        {
+          "Id": 1033,
+          "questionId": 103,
+          "name": "At coding time",
+          "isAnswer": false
+        },
+        {
+          "Id": 1034,
+          "questionId": 103,
+          "name": "At execution time",
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "Id": 104,
+      "name": "Which concept of Java is a way of converting real world objects in terms of class?",
+      "options": [
+        {
+          "Id": 1041,
+          "questionId": 104,
+          "name": "Polymorphism",
+          "isAnswer": false
+        },
+        {
+          "Id": 1042,
+          "questionId": 104,
+          "name": "Encapsulation",
+          "isAnswer": false
+        },
+        {
+          "Id": 1043,
+          "questionId": 104,
+          "name": "Abstraction",
+          "isAnswer": true
+        },
+        {
+          "Id": 1044,
+          "questionId": 104,
+          "name": "Inheritance",
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "Id": 105,
+      "name": "Which of these method of class String is used to remove leading and trailing whitespaces?",
+      "options": [
+        {
+          "Id": 1051,
+          "questionId": 105,
+          "name": "startsWith()",
+          "isAnswer": false
+        },
+        {
+          "Id": 1052,
+          "questionId": 105,
+          "name": "trim()",
+          "isAnswer": true
+        },
+        {
+          "Id": 1053,
+          "questionId": 105,
+          "name": "Trim()",
+          "isAnswer": false
+        },
+        {
+          "Id": 1054,
+          "questionId": 105,
+          "name": "doTrim()",
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "Id": 106,
+      "name": "Which of these method of class String is used to compare two String objects for their equality?",
+      "options": [
+        {
+          "Id": 1061,
+          "questionId": 106,
+          "name": "equals()",
+          "isAnswer": true
+        },
+        {
+          "Id": 1062,
+          "questionId": 106,
+          "name": "Equals()",
+          "isAnswer": false
+        },
+        {
+          "Id": 1063,
+          "questionId": 106,
+          "name": "isequal()",
+          "isAnswer": false
+        },
+        {
+          "Id": 1064,
+          "questionId": 106,
+          "name": "Isequal()",
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "Id": 107,
+      "name": "Which of these methods is used to compare a specific region inside a string with another specific region in another string?",
+      "options": [
+        {
+          "Id": 1071,
+          "questionId": 107,
+          "name": "regionMatch()",
+          "isAnswer": false
+        },
+        {
+          "Id": 1072,
+          "questionId": 107,
+          "name": "match()",
+          "isAnswer": false
+        },
+        {
+          "Id": 1073,
+          "questionId": 107,
+          "name": "RegionMatches()",
+          "isAnswer": false
+        },
+        {
+          "Id": 1074,
+          "questionId": 107,
+          "name": "regionMatches()",
+          "isAnswer": true
+        }
+      ]
+    },
+    {
+      "Id": 108,
+      "name": "Which of these methods of class String is used to check whether a given object starts with a particular string literal?",
+      "options": [
+        {
+          "Id": 1081,
+          "questionId": 108,
+          "name": "startsWith()",
+          "isAnswer": true
+        },
+        {
+          "Id": 1082,
+          "questionId": 108,
+          "name": "endsWith()",
+          "isAnswer": false
+        },
+        {
+          "Id": 1083,
+          "questionId": 108,
+          "name": "Starts()",
+          "isAnswer": false
+        },
+        {
+          "Id": 1084,
+          "questionId": 108,
+          "name": "ends()",
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "Id": 109,
+      "name": "What is the value returned by function compareTo() if the invoking string is less than the string compared?",
+      "options": [
+        {
+          "Id": 1091,
+          "questionId": 109,
+          "name": "zero",
+          "isAnswer": false
+        },
+        {
+          "Id": 1092,
+          "questionId": 109,
+          "name": "value less than zero",
+          "isAnswer": true
+        },
+        {
+          "Id": 1093,
+          "questionId": 109,
+          "name": "value greater than zero",
+          "isAnswer": false
+        },
+        {
+          "Id": 1094,
+          "questionId": 109,
+          "name": "none of the above",
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "Id": 1010,
+      "name": "Which of these data type value is returned by equals() method of String class?",
+      "options": [
+        {
+          "Id": 10101,
+          "questionId": 1010,
+          "name": "char",
+          "isAnswer": false
+        },
+        {
+          "Id": 10102,
+          "questionId": 1010,
+          "name": "int",
+          "isAnswer": false
+        },
+        {
+          "Id": 10103,
+          "questionId": 1010,
+          "name": "boolean",
+          "isAnswer": true
+        },
+        {
+          "Id": 10104,
+          "questionId": 1010,
+          "name": "all of the above",
+          "isAnswer": false
+        }
+      ]
+    }
+  ]
+}

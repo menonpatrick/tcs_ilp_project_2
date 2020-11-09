@@ -1,0 +1,179 @@
+<br><br>
+<div class="container">
+  <!-- <form [formGroup]="myGroup" (ngSubmit)="onSubmit()">
+    <div class="jumbotron">
+      <ng-container *ngIf="step == 1">
+        Q{{step}}. {{questions[0].name}} <br><br>
+        <div *ngFor="let option of questions[0].options; index as i" class="form-check form-check-inline">
+          <input class="form-check-input" (change)="changeDetected(1, i)" type="radio" name={{option.id}} formControlName="answer1" id="answer1" value="{{option.name}}">
+          <div>
+            <div class="form-check-label" for="answer1">{{option.name}}<br/></div>
+          </div>
+      </div>
+      </ng-container>
+      <ng-container *ngIf="step == 2">
+        Q{{step}}. {{questions[1].name}} <br><br>
+        <div *ngFor="let option of questions[1].options; index as i" class="form-check form-check-inline">
+          <input class="form-check-input" (change)="changeDetected(2, i)" type="radio" formControlName="answer2" id="answer2" value="{{option.name}}">
+          <div>
+            <div class="form-check-label" for="answer2">{{option.name}}<br/></div>
+          </div>
+      </div>
+      </ng-container>
+      <ng-container *ngIf="step == 3">
+        Q{{step}}. {{questions[2].name}} <br><br>
+        <div *ngFor="let option of questions[2].options; index as i" class="form-check form-check-inline">
+          <input class="form-check-input" (change)="changeDetected(3, i)" type="radio" formControlName="answer3" id="answer3" value="{{option.name}}">
+          <div>
+            <div class="form-check-label" for="answer3">{{option.name}}<br/></div>
+          </div>
+      </div>
+      </ng-container>
+      <ng-container *ngIf="step == 4">
+        Q{{step}}. {{questions[3].name}} <br><br>
+        <div *ngFor="let option of questions[3].options; index as i" class="form-check form-check-inline">
+          <input class="form-check-input" (change)="changeDetected(4, i)" type="radio" formControlName="answer4" id="answer4" value="{{option.name}}">
+          <div>
+            <div class="form-check-label" for="answer4">{{option.name}}<br/></div>
+          </div>
+      </div>
+      </ng-container>
+      <ng-container *ngIf="step == 5">
+        Q{{step}}. {{questions[4].name}} <br><br>
+          <div *ngFor="let option of questions[4].options; index as i" class="form-check form-check-inline">
+            <input class="form-check-input" (change)="changeDetected(5, i)" type="radio" formControlName="answer5" id="answer5" value="{{option.name}}">
+            <div>
+              <div class="form-check-label" for="answer5">{{option.name}}<br/></div>
+            </div>
+          </div>
+      </ng-container>
+      <ng-container *ngIf="step == 6">
+        Q{{step}}. {{questions[5].name}} <br><br>
+          <div *ngFor="let option of questions[5].options; index as i" class="form-check form-check-inline">
+            <input class="form-check-input" (change)="changeDetected(6, i)" type="radio" formControlName="answer6" id="answer6" value="{{option.name}}">
+            <div>
+              <div class="form-check-label" for="answer6">{{option.name}}<br/></div>
+            </div>
+          </div>
+      </ng-container>
+      <ng-container *ngIf="step == 7">
+        Q{{step}}. {{questions[6].name}} <br><br>
+          <div *ngFor="let option of questions[6].options; index as i" class="form-check form-check-inline">
+            <input class="form-check-input" (change)="changeDetected(7, i)" type="radio" formControlName="answer7" id="answer7" value="{{option.name}}">
+            <div>
+              <div class="form-check-label" for="answer7">{{option.name}}<br/></div>
+            </div>
+          </div>
+      </ng-container>
+      <ng-container *ngIf="step == 8">
+        Q{{step}}. {{questions[7].name}} <br><br>
+          <div *ngFor="let option of questions[7].options; index as i" class="form-check form-check-inline">
+            <input class="form-check-input" (change)="changeDetected(8, i)" type="radio" formControlName="answer8" id="answer8" value="{{option.name}}">
+            <div>
+              <div class="form-check-label" for="answer8">{{option.name}}<br/></div>
+            </div>
+          </div>
+      </ng-container>
+      <ng-container *ngIf="step == 9">
+        Q{{step}}. {{questions[8].name}} <br><br>
+          <div *ngFor="let option of questions[8].options; index as i" class="form-check form-check-inline">
+            <input class="form-check-input" (change)="changeDetected(9, i)" type="radio" formControlName="answer9" id="answer9" value="{{option.name}}">
+            <div>
+              <div class="form-check-label" for="answer9">{{option.name}}<br/></div>
+            </div>
+          </div>
+      </ng-container>
+      <ng-container *ngIf="step == 10">
+        Q{{step}}. {{questions[9].name}} <br><br>
+          <div *ngFor="let option of questions[9].options; index as i" class="form-check form-check-inline">
+            <input class="form-check-input" (change)="changeDetected(10, i)" type="radio" formControlName="answer10" id="answer10" value="{{option.name}}">
+            <div>
+              <div class="form-check-label" for="answer10">{{option.name}}<br/></div>
+            </div>
+          </div>
+      </ng-container><br><br>
+    </div>
+    <button type="button" class="btn btn-success" *ngIf="step >= 2" (click)="previousQuestion()">Back</button>
+    <button type="button" class="move-right btn btn-success" *ngIf="step <= 9"(click)="nextQuestion(step)">Next</button>
+
+    <button type="submit" class="move-right btn btn-primary" *ngIf="step == 10" data-toggle="modal" data-target="#questionModal">
+      Submit
+    </button>
+
+    <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="questionModalLabel">Quiz Completed</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            You have scored: {{counter * 10}} %
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="#" type="button" class="btn btn-primary">Go back to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form> -->
+
+
+
+
+
+
+
+
+  <form [formGroup]="myGroup" (ngSubmit)="onSubmit()">
+    <div class="jumbotron">
+      <div *ngFor="let question of questions; index as k">
+        <ng-container *ngIf="step == k">
+          Q{{step+1}}. {{questions[k].name}} <br><br>
+          <div *ngFor="let option of questions[k].options; index as i" class="form-check form-check-inline">
+            <input class="form-check-input" (change)="changeDetected(k, i)" type="radio" name={{option.id}} formControlName="answer1" id="answer1" value="{{option.name}}">
+            <div>
+              <div class="form-check-label" for="answer1">{{option.name}}<br/></div>
+            </div>
+        </div>
+        </ng-container>
+
+      </div>
+      <br><br>
+    </div>
+    <button type="button" class="btn btn-success" *ngIf="step >= 1" (click)="previousQuestion()">Back</button>
+    <button type="button" class="move-right btn btn-success" *ngIf="step < 9"(click)="nextQuestion(step)">Next</button>
+    <!-- <button type="submit" class="btn btn-danger" *ngIf="step == 5">Submit</button> -->
+
+    <!-- Button trigger modal -->
+    <button type="submit" class="move-right btn btn-primary" *ngIf="step == 9" data-toggle="modal" data-target="#questionModal">
+      Submit
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="questionModalLabel">Quiz Completed</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            You have scored: {{counter * 10}} %
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="#" type="button" class="btn btn-primary">Go back to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+

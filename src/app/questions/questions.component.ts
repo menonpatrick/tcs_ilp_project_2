@@ -1,3 +1,4 @@
+import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Question } from '../model.question';
@@ -10,6 +11,7 @@ import { QuestionService } from '../question.service';
 })
 export class QuestionsComponent implements OnInit {
   questions: Question[] = [];
+  checkAnswer: Map<number, number> = new Map<number, number>();
   counter = 0;
   step = 0;
 
@@ -27,7 +29,9 @@ export class QuestionsComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.myGroup);
+    this.checkAnswer.forEach((value: number, key: number) => {
+      this.counter += value;
+    });
   }
 
   nextQuestion(step) {
@@ -40,7 +44,10 @@ export class QuestionsComponent implements OnInit {
 
   changeDetected(questionId, optionId) {
     if (this.questions[questionId].options[optionId].isAnswer)
-      this.counter = this.counter + 1;
+      this.checkAnswer.set(questionId, 1);
+    else
+      this.checkAnswer.set(questionId, 0);
+
   }
 
 }

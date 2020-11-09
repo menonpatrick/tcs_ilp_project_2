@@ -11,22 +11,18 @@
             <div>
               <div class="form-check-label" for="answer1">{{option.name}}<br/></div>
             </div>
-        </div>
+          </div>
         </ng-container>
-
       </div>
       <br><br>
     </div>
     <button type="button" class="btn btn-success" *ngIf="step >= 1" (click)="previousQuestion(step)">Back</button>
     <button type="button" class="move-right btn btn-success" *ngIf="step < 9"(click)="nextQuestion(step)">Next</button>
-    <!-- <button type="submit" class="btn btn-danger" *ngIf="step == 5">Submit</button> -->
 
-    <!-- Button trigger modal -->
     <button type="submit" class="move-right btn btn-primary" *ngIf="step == 9" data-toggle="modal" data-target="#questionModal">
       Submit
     </button>
 
-    <!-- Modal -->
     <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -40,7 +36,6 @@
             You have scored: {{counter * 10}} %
           </div>
           <div class="modal-footer">
-            <!-- <button type="button" (click)="step = 0" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
             <a href="#" type="button" class="btn btn-primary">Go back to Home</a>
           </div>
         </div>
